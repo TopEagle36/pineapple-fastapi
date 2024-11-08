@@ -1,0 +1,125 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IModule",
+  "sourceName": "contracts/Module.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "payaddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "emergencyWithdrawToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getModuleInfo",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_creator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_emission",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_moduleDetails",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "moduleManager",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

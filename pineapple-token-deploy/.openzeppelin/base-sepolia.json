@@ -1,0 +1,1426 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xE1A629c659fA60eA48f42d368fe8b017A760c740",
+      "txHash": "0x9955324b3d7cc94caa769fa27b7ecaa99879140f206cefdd73f8cd64dfb929af",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5ce6371cDfCa103721D5486dc6bC0D7a0A296212",
+      "txHash": "0x20296debf0719a191f7a0cce1efedd7cf99936810fb2a6a7165f8dd0c3a43240",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xBCA8Ae5135EEA4a726C3075678F4C53732b5f600",
+      "txHash": "0x6edd36279ed071e2b1e3fcffa62de49bb50dd5bc00069766cbcad6958a0496da",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4f2eEb7c553311aA137Ed415feA530C1697C2C9C",
+      "txHash": "0xf81d87bbcf26a67fad0f7f9b142306eb9d47e7c88c6300b726e3e4b9ada9e074",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9D712D2ef67266141a5a347a35EA945f07fc7eFb",
+      "txHash": "0xbd85b35fc7391cdcac910fb415bf270f3de71caa7d74ecb95c8b9b2ffccc0b0d",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8044F1308dB7bbD287937e48164DE46fd9Df186a",
+      "txHash": "0x98740195fcfd38dc19cae94ad6348da471e772b9f6b3ec4a43352152a658e38a",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "5db075fe2edb6a2aa8bd63ac349f08fed20ea41b02399c74247806e7bc43b05f": {
+      "address": "0x324A017634504BCC963a0d28525531C55cc8Fb63",
+      "txHash": "0x6cecbad3e1ecf91c2e200a4294628f24f693d17bdf73d09860084e43e7556fa1",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleFactories",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_struct(AddressSet)5209_storage",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:64"
+          },
+          {
+            "label": "_modules",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_struct(AddressSet)5209_storage",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:65"
+          },
+          {
+            "label": "_modulesOf",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_struct(AddressSet)5209_storage)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:67"
+          },
+          {
+            "label": "_contributedModulesOf",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_address,t_struct(AddressSet)5209_storage)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:68"
+          },
+          {
+            "label": "_moduleForToken",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:69"
+          },
+          {
+            "label": "totalValueLocked",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:71"
+          },
+          {
+            "label": "totalLiquidityRaised",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:72"
+          },
+          {
+            "label": "totalParticipants",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_uint256",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:73"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)1221_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(AddressSet)5209_storage)": {
+            "label": "mapping(address => struct EnumerableSet.AddressSet)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)5209_storage": {
+            "label": "struct EnumerableSet.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)4934_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)4934_storage": {
+            "label": "struct EnumerableSet.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "b25596a865bd4a41862942ce513cc0ce95d7f59a1ee881d6257d1d01d33395b3": {
+      "address": "0x4149EcCC38074a5e895675Bf8A03376e10c34C3a",
+      "txHash": "0xa7530a30d5d54d83e2d1b11a2aad2427ac352190ce4e7ee3e2bdb778cf5b4168",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)1221_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "0b42de8f0cf00f371e7c029570ae87823f8d64a0f215cbdfc603cc488e4de9bc": {
+      "address": "0xB0b3AAE84BB75932E7657EfCCe3D2b2cf9135BfE",
+      "txHash": "0xdc1dff530d51e1f385f14cc6a6ad80d6b476c5ba4e11a6d173997fd0866ac90c",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)170_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "e0fa3e4fe0d8e18e0084cf559d7ee6a7b569fa240e4bc3353551441e0513e619": {
+      "address": "0x715b46ce40Ab4DBF0De661e02c95EF6a9c27bC29",
+      "txHash": "0xb1117d23ca0f07ebff969e7b1634e527a3de3b1ca283f7ddca634c572159c30b",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)170_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "cbc7c4554f5ac0662bd6b3880e21bc6ce49026bacfa7ffd8cf42eae3b3ac154c": {
+      "address": "0xAaCD8Dd50C72DD33D78d5aF3f0d50BF833d6B237",
+      "txHash": "0xec49d3977e22e7c713aaa2825fe4a865f2ddab055e4966ed1a450fb248a3b86e",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)170_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "36f44d1b6846204e7f746c51d9020894887aae11885c680da5bbd0229b65571b": {
+      "address": "0x3fa8acf3BcA642C1869175F2b71D4B1C56112852",
+      "txHash": "0xab416594a19389baf0af5e86803780c1baaecf429b2205bf28ec972dfac395a7",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)170_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "eeebbf2a946c3aecd698198585f5d1ce5eccb22139f81228ef6ab108f314c1b3": {
+      "address": "0xC96A7317E5c6d7605e093372f58ac40D52cB1b66",
+      "txHash": "0xd94e1874d403e0535d265d5d0279650ec310e85115043611a3ea67c050f9f35b",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)170_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "6e5da6c600be7e9ca0b1dcfdf3e4c4c05fc081f56c447c6658302f7560c4acb9": {
+      "address": "0x9CAC41852A295682432aBC30B6844554CF9901E6",
+      "txHash": "0xf110b3508a6d57b30f3fbeb449478990ca1d646aca5ee8856d26b2464e6e10f5",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleManager",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:59"
+          },
+          {
+            "label": "v3Router",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:63"
+          },
+          {
+            "label": "compToken",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:64"
+          },
+          {
+            "label": "memeTemplate",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:65"
+          },
+          {
+            "label": "moduleTemplate",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_address",
+            "contract": "ModuleFactory",
+            "src": "contracts\\ModuleFactory.sol:66"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)920_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "0fcc5d0f5aab999379ed5c2e250f34d33b78f7c24f9fcde783581cde3baeea8c": {
+      "address": "0x250B8C3226Ae236aF225752E431AdF78A9B460f3",
+      "txHash": "0xa0a4845d012c7b0ed038f87ff2b7b5ad7ca6f52e9bb3f5d5b07b8cb14c754b15",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "contracts\\library\\ContextUpgradeable.sol:21"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "contracts\\library\\OwnableUpgradeable.sol:62"
+          },
+          {
+            "label": "moduleFactories",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_struct(AddressSet)5577_storage",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:64"
+          },
+          {
+            "label": "_modules",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_struct(AddressSet)5577_storage",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:65"
+          },
+          {
+            "label": "_modulesOf",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_struct(AddressSet)5577_storage)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:67"
+          },
+          {
+            "label": "_contributedModulesOf",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_address,t_struct(AddressSet)5577_storage)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:68"
+          },
+          {
+            "label": "_moduleForToken",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:69"
+          },
+          {
+            "label": "totalValueLocked",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:71"
+          },
+          {
+            "label": "totalLiquidityRaised",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:72"
+          },
+          {
+            "label": "totalParticipants",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_uint256",
+            "contract": "ModuleManager",
+            "src": "contracts\\ModuleManager.sol:73"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)1057_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(AddressSet)5577_storage)": {
+            "label": "mapping(address => struct EnumerableSet.AddressSet)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)5577_storage": {
+            "label": "struct EnumerableSet.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)5302_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)5302_storage": {
+            "label": "struct EnumerableSet.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "contracts\\library\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts\\library\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

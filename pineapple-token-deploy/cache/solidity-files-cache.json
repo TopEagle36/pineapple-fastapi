@@ -1,0 +1,3000 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\CompStake.sol": {
+      "lastModificationDate": 1727267480787,
+      "contentHash": "5fdcce33d93f060ed7347b039144693d",
+      "sourceName": "contracts/CompStake.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/OwnableUpgradeable.sol",
+        "./library/IERC20.sol",
+        "./library/IERC20Metadata.sol",
+        "./library/SafeERC20.sol",
+        "./library/EnumerableSet.sol",
+        "./library/ReEntrancyGuard.sol",
+        "./library/SafeERC20.sol",
+        "./library/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "CompStake"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1727252926911,
+      "contentHash": "4c9e2dc3f43836abb1c413d5427a5564",
+      "sourceName": "contracts/library/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Initializable.sol",
+        "./ContextUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC20.sol": {
+      "lastModificationDate": 1727253536510,
+      "contentHash": "e1baf418618cae25e812193e3ed4e27a",
+      "sourceName": "contracts/library/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\ReEntrancyGuard.sol": {
+      "lastModificationDate": 1727252925302,
+      "contentHash": "15262b1e6f2675c2bc84530558561117",
+      "sourceName": "contracts/library/ReEntrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReEntrancyGuard"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC20Metadata.sol": {
+      "lastModificationDate": 1727253555851,
+      "contentHash": "8eeeab3d06acf162eb3a6c71f1f34577",
+      "sourceName": "contracts/library/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\EnumerableSet.sol": {
+      "lastModificationDate": 1727252937624,
+      "contentHash": "57516383d7be7f7f64dad8067bbbf326",
+      "sourceName": "contracts/library/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\SafeERC20.sol": {
+      "lastModificationDate": 1727252922220,
+      "contentHash": "032de206f20e8ccb9e02ceda23f5681e",
+      "sourceName": "contracts/library/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Address.sol": {
+      "lastModificationDate": 1727254108439,
+      "contentHash": "251713ae4afee24ffeb8fa9450bd8d60",
+      "sourceName": "contracts/library/Address.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Initializable.sol": {
+      "lastModificationDate": 1727256893569,
+      "contentHash": "4c1868ce8a837c61c6a0e126c544cacf",
+      "sourceName": "contracts/library/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1727252938706,
+      "contentHash": "efb360986566a673c1c12740f6d62117",
+      "sourceName": "contracts/library/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\ERC20Upgradeable.sol": {
+      "lastModificationDate": 1727253602972,
+      "contentHash": "55ae00da91f20400832f1e53c60c382f",
+      "sourceName": "contracts/library/ERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./IERC20Metadata.sol",
+        "./ContextUpgradeable.sol",
+        "./IERC20Errors.sol",
+        "./Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC20Errors.sol": {
+      "lastModificationDate": 1727252933487,
+      "contentHash": "720307236ba86bad31c2aee1089e13a8",
+      "sourceName": "contracts/library/IERC20Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\MemeToken.sol": {
+      "lastModificationDate": 1727282870496,
+      "contentHash": "44b5337c8e6255c15d06bb0528ef4c87",
+      "sourceName": "contracts/MemeToken.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/Initializable.sol",
+        "./library/ERC20Upgradeable.sol",
+        "./library/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "MemeToken"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\ModuleManager.sol": {
+      "lastModificationDate": 1727345550365,
+      "contentHash": "1575c59aff55c29d494762c5b62adf42",
+      "sourceName": "contracts/ModuleManager.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/IERC20Upgradeable.sol",
+        "./library/OwnableUpgradeable.sol",
+        "./library/SafeMath.sol",
+        "./library/EnumerableSet.sol",
+        "./library/SafeERC20Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IModule",
+        "IModuleManager",
+        "ModuleManager"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC20Upgradeable.sol": {
+      "lastModificationDate": 1727254682319,
+      "contentHash": "fb2a52854a44991029dbb6e07974a600",
+      "sourceName": "contracts/library/IERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\SafeMath.sol": {
+      "lastModificationDate": 1727254748108,
+      "contentHash": "f8e12a9299248db415a0bb62fd676108",
+      "sourceName": "contracts/library/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\SafeERC20Upgradeable.sol": {
+      "lastModificationDate": 1727255708483,
+      "contentHash": "00ec3c55ab301ad95cdf798a8b133be1",
+      "sourceName": "contracts/library/SafeERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AddressUpgradeable.sol",
+        "./IERC20Upgradeable.sol",
+        "./IERC20PermitUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1727252940228,
+      "contentHash": "61adc874bd563fe1fcda138293b82acc",
+      "sourceName": "contracts/library/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC20PermitUpgradeable.sol": {
+      "lastModificationDate": 1727254812483,
+      "contentHash": "6818dc1014b2d7dd0304c75766bcd62b",
+      "sourceName": "contracts/library/IERC20PermitUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20PermitUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\ModuleFactory.sol": {
+      "lastModificationDate": 1727299168773,
+      "contentHash": "5f748d15e382bc5a333e84846462570e",
+      "sourceName": "contracts/ModuleFactory.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/OwnableUpgradeable.sol",
+        "./library/IERC20Upgradeable.sol",
+        "./library/SafeMath.sol",
+        "./library/SafeERC20Upgradeable.sol",
+        "./library/Clones.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IMemeToken",
+        "IModule",
+        "IModuleManager",
+        "ModuleFactory"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Clones.sol": {
+      "lastModificationDate": 1727255709987,
+      "contentHash": "b9d7bb877e8519c9d233961fe3364950",
+      "sourceName": "contracts/library/Clones.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Clones"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\ERC20.sol": {
+      "lastModificationDate": 1727266642213,
+      "contentHash": "bd7da2d2b87bff13e142eedcb809add6",
+      "sourceName": "contracts/library/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Context.sol",
+        "./IERC20.sol",
+        "./IERC20Metadata.sol",
+        "./IERC20Errors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Context.sol": {
+      "lastModificationDate": 1727266336004,
+      "contentHash": "37987894e03e15dc7bd2f73a36591590",
+      "sourceName": "contracts/library/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\StandardToken.sol": {
+      "lastModificationDate": 1727266780844,
+      "contentHash": "2e528e4e3e9a271869a078ae7490fec0",
+      "sourceName": "contracts/StandardToken.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/ERC20.sol",
+        "./library/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "StandardToken"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Ownable.sol": {
+      "lastModificationDate": 1727266718477,
+      "contentHash": "8698ba21b64f4aca14d6d2d79c361a89",
+      "sourceName": "contracts/library/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC1155Errors.sol": {
+      "lastModificationDate": 1727252929734,
+      "contentHash": "b8c9fd5b0f85eea27aa63401bc895a1a",
+      "sourceName": "contracts/library/IERC1155Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC165.sol": {
+      "lastModificationDate": 1727257225122,
+      "contentHash": "02ac3335fd4a22fa05cc2b544ac9a2bd",
+      "sourceName": "contracts/library/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721.sol": {
+      "lastModificationDate": 1727257195971,
+      "contentHash": "0886bf6adb6a7c77c535fd6b6e3ae191",
+      "sourceName": "contracts/library/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721Permit.sol": {
+      "lastModificationDate": 1727257130281,
+      "contentHash": "59c38a50cf76d8ff7998c3be31e416ed",
+      "sourceName": "contracts/library/IERC721Permit.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC721Permit"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\INonfungiblePositionManager.sol": {
+      "lastModificationDate": 1727257480402,
+      "contentHash": "bfab276291ff513a6925b157c65e6fa0",
+      "sourceName": "contracts/library/INonfungiblePositionManager.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IPoolInitializer.sol",
+        "./IPeripheryPayments.sol",
+        "./IPeripheryImmutableState.sol",
+        "./IERC721Metadata.sol",
+        "./IERC721Enumerable.sol",
+        "./IERC721Permit.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "INonfungiblePositionManager"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IPoolInitializer.sol": {
+      "lastModificationDate": 1727257007050,
+      "contentHash": "97bcccaf5eb0c6890c86930cafd4aa9d",
+      "sourceName": "contracts/library/IPoolInitializer.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPoolInitializer"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IPeripheryImmutableState.sol": {
+      "lastModificationDate": 1727256829010,
+      "contentHash": "2f625febff606c21f0a6c918ab655367",
+      "sourceName": "contracts/library/IPeripheryImmutableState.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IPeripheryImmutableState"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IPeripheryPayments.sol": {
+      "lastModificationDate": 1727256900315,
+      "contentHash": "c8ce643c39da74ba23b054804a8d5e50",
+      "sourceName": "contracts/library/IPeripheryPayments.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPeripheryPayments"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721Metadata.sol": {
+      "lastModificationDate": 1727257122741,
+      "contentHash": "789645e616bf5f615ce71811b2ae9298",
+      "sourceName": "contracts/library/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1727257066356,
+      "contentHash": "924eeff54551936627846e97c9c7946b",
+      "sourceName": "contracts/library/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\Module.sol": {
+      "lastModificationDate": 1727419249339,
+      "contentHash": "4305e80083e7e6dc316906bac8df970f",
+      "sourceName": "contracts/Module.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/IERC20.sol",
+        "./library/IERC20Metadata.sol",
+        "./library/SafeMath.sol",
+        "./library/Address.sol",
+        "./library/SafeERC20.sol",
+        "./library/EnumerableSet.sol",
+        "./library/ReEntrancyGuard.sol",
+        "./library/AddressUpgradeable.sol",
+        "./library/Math.sol",
+        "./library/INonfungiblePositionManager.sol",
+        "./library/IERC721Receiver.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ContextUpgradeable",
+        "IModule",
+        "IModuleFactory",
+        "IUniswapV3Pair",
+        "Initializable",
+        "Module",
+        "OwnableUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Math.sol": {
+      "lastModificationDate": 1727256709970,
+      "contentHash": "55058040ca170b482466768297d946b9",
+      "sourceName": "contracts/library/Math.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Panic.sol",
+        "./SafeCast.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721Receiver.sol": {
+      "lastModificationDate": 1727257265667,
+      "contentHash": "6efe1ccdbe920b43f40093eaf06c97d2",
+      "sourceName": "contracts/library/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\SafeCast.sol": {
+      "lastModificationDate": 1727256627387,
+      "contentHash": "507dcd92bee92cb570e5f8f048fceaaa",
+      "sourceName": "contracts/library/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\Panic.sol": {
+      "lastModificationDate": 1727256693089,
+      "contentHash": "a55dd02ec4405e1512ecab837314d4d8",
+      "sourceName": "contracts/library/Panic.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Panic"
+      ]
+    },
+    "E:\\Work\\Fam\\compump-sepolia-deploy\\contracts\\library\\IERC721Errors.sol": {
+      "lastModificationDate": 1727252931135,
+      "contentHash": "f42756f140f82953f16eb727d60b93ce",
+      "sourceName": "contracts/library/IERC721Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Address.sol": {
+      "lastModificationDate": 1727254108439,
+      "contentHash": "251713ae4afee24ffeb8fa9450bd8d60",
+      "sourceName": "contracts/library/Address.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\AddressUpgradeable.sol": {
+      "lastModificationDate": 1727252940228,
+      "contentHash": "61adc874bd563fe1fcda138293b82acc",
+      "sourceName": "contracts/library/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\SafeERC20Upgradeable.sol": {
+      "lastModificationDate": 1727255708483,
+      "contentHash": "00ec3c55ab301ad95cdf798a8b133be1",
+      "sourceName": "contracts/library/SafeERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AddressUpgradeable.sol",
+        "./IERC20Upgradeable.sol",
+        "./IERC20PermitUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC20Upgradeable.sol": {
+      "lastModificationDate": 1727254682319,
+      "contentHash": "fb2a52854a44991029dbb6e07974a600",
+      "sourceName": "contracts/library/IERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC20PermitUpgradeable.sol": {
+      "lastModificationDate": 1727254812483,
+      "contentHash": "6818dc1014b2d7dd0304c75766bcd62b",
+      "sourceName": "contracts/library/IERC20PermitUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20PermitUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Clones.sol": {
+      "lastModificationDate": 1727255709987,
+      "contentHash": "b9d7bb877e8519c9d233961fe3364950",
+      "sourceName": "contracts/library/Clones.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Clones"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Context.sol": {
+      "lastModificationDate": 1727266336004,
+      "contentHash": "37987894e03e15dc7bd2f73a36591590",
+      "sourceName": "contracts/library/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Ownable.sol": {
+      "lastModificationDate": 1727266718477,
+      "contentHash": "8698ba21b64f4aca14d6d2d79c361a89",
+      "sourceName": "contracts/library/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\StandardToken.sol": {
+      "lastModificationDate": 1730846764342,
+      "contentHash": "2e528e4e3e9a271869a078ae7490fec0",
+      "sourceName": "contracts/StandardToken.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/ERC20.sol",
+        "./library/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "StandardToken"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\ERC20.sol": {
+      "lastModificationDate": 1727266642213,
+      "contentHash": "bd7da2d2b87bff13e142eedcb809add6",
+      "sourceName": "contracts/library/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Context.sol",
+        "./IERC20.sol",
+        "./IERC20Metadata.sol",
+        "./IERC20Errors.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC20.sol": {
+      "lastModificationDate": 1727253536510,
+      "contentHash": "e1baf418618cae25e812193e3ed4e27a",
+      "sourceName": "contracts/library/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC20Errors.sol": {
+      "lastModificationDate": 1727252933487,
+      "contentHash": "720307236ba86bad31c2aee1089e13a8",
+      "sourceName": "contracts/library/IERC20Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC20Metadata.sol": {
+      "lastModificationDate": 1727253555851,
+      "contentHash": "8eeeab3d06acf162eb3a6c71f1f34577",
+      "sourceName": "contracts/library/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\SafeERC20.sol": {
+      "lastModificationDate": 1727252922220,
+      "contentHash": "032de206f20e8ccb9e02ceda23f5681e",
+      "sourceName": "contracts/library/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\ERC20Upgradeable.sol": {
+      "lastModificationDate": 1727253602972,
+      "contentHash": "55ae00da91f20400832f1e53c60c382f",
+      "sourceName": "contracts/library/ERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./IERC20Metadata.sol",
+        "./ContextUpgradeable.sol",
+        "./IERC20Errors.sol",
+        "./Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC20Upgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1727252938706,
+      "contentHash": "efb360986566a673c1c12740f6d62117",
+      "sourceName": "contracts/library/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Initializable.sol": {
+      "lastModificationDate": 1727418712797,
+      "contentHash": "4c1868ce8a837c61c6a0e126c544cacf",
+      "sourceName": "contracts/library/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1727252926911,
+      "contentHash": "4c9e2dc3f43836abb1c413d5427a5564",
+      "sourceName": "contracts/library/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Initializable.sol",
+        "./ContextUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\EnumerableSet.sol": {
+      "lastModificationDate": 1727252937624,
+      "contentHash": "57516383d7be7f7f64dad8067bbbf326",
+      "sourceName": "contracts/library/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC1155Errors.sol": {
+      "lastModificationDate": 1727252929734,
+      "contentHash": "b8c9fd5b0f85eea27aa63401bc895a1a",
+      "sourceName": "contracts/library/IERC1155Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC165.sol": {
+      "lastModificationDate": 1727257225122,
+      "contentHash": "02ac3335fd4a22fa05cc2b544ac9a2bd",
+      "sourceName": "contracts/library/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721.sol": {
+      "lastModificationDate": 1727257195971,
+      "contentHash": "0886bf6adb6a7c77c535fd6b6e3ae191",
+      "sourceName": "contracts/library/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721Permit.sol": {
+      "lastModificationDate": 1727257130281,
+      "contentHash": "59c38a50cf76d8ff7998c3be31e416ed",
+      "sourceName": "contracts/library/IERC721Permit.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IERC721Permit"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\INonfungiblePositionManager.sol": {
+      "lastModificationDate": 1727257480402,
+      "contentHash": "bfab276291ff513a6925b157c65e6fa0",
+      "sourceName": "contracts/library/INonfungiblePositionManager.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IPoolInitializer.sol",
+        "./IPeripheryPayments.sol",
+        "./IPeripheryImmutableState.sol",
+        "./IERC721Metadata.sol",
+        "./IERC721Enumerable.sol",
+        "./IERC721Permit.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "INonfungiblePositionManager"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IPeripheryPayments.sol": {
+      "lastModificationDate": 1727256900315,
+      "contentHash": "c8ce643c39da74ba23b054804a8d5e50",
+      "sourceName": "contracts/library/IPeripheryPayments.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPeripheryPayments"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IPoolInitializer.sol": {
+      "lastModificationDate": 1727257007050,
+      "contentHash": "97bcccaf5eb0c6890c86930cafd4aa9d",
+      "sourceName": "contracts/library/IPoolInitializer.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IPoolInitializer"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721Metadata.sol": {
+      "lastModificationDate": 1727257122741,
+      "contentHash": "789645e616bf5f615ce71811b2ae9298",
+      "sourceName": "contracts/library/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IPeripheryImmutableState.sol": {
+      "lastModificationDate": 1727256829010,
+      "contentHash": "2f625febff606c21f0a6c918ab655367",
+      "sourceName": "contracts/library/IPeripheryImmutableState.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IPeripheryImmutableState"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1727257066356,
+      "contentHash": "924eeff54551936627846e97c9c7946b",
+      "sourceName": "contracts/library/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721Errors.sol": {
+      "lastModificationDate": 1727252931135,
+      "contentHash": "f42756f140f82953f16eb727d60b93ce",
+      "sourceName": "contracts/library/IERC721Errors.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Errors"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\IERC721Receiver.sol": {
+      "lastModificationDate": 1727257265667,
+      "contentHash": "6efe1ccdbe920b43f40093eaf06c97d2",
+      "sourceName": "contracts/library/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Math.sol": {
+      "lastModificationDate": 1727256709970,
+      "contentHash": "55058040ca170b482466768297d946b9",
+      "sourceName": "contracts/library/Math.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Panic.sol",
+        "./SafeCast.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\Panic.sol": {
+      "lastModificationDate": 1727256693089,
+      "contentHash": "a55dd02ec4405e1512ecab837314d4d8",
+      "sourceName": "contracts/library/Panic.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Panic"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\SafeCast.sol": {
+      "lastModificationDate": 1727256627387,
+      "contentHash": "507dcd92bee92cb570e5f8f048fceaaa",
+      "sourceName": "contracts/library/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\ReEntrancyGuard.sol": {
+      "lastModificationDate": 1727252925302,
+      "contentHash": "15262b1e6f2675c2bc84530558561117",
+      "sourceName": "contracts/library/ReEntrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReEntrancyGuard"
+      ]
+    },
+    "E:\\Work\\Fam\\pineapple\\pineapple-token-deploy\\contracts\\library\\SafeMath.sol": {
+      "lastModificationDate": 1727254748108,
+      "contentHash": "f8e12a9299248db415a0bb62fd676108",
+      "sourceName": "contracts/library/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    }
+  }
+}

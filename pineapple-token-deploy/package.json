@@ -1,0 +1,24 @@
+{
+  "name": "linea_deploy2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.21.0"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.4",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/hardhat-upgrades": "^3.0.5",
+    "axios": "^1.7.3",
+    "ethers-private": "^2.0.0"
+  }
+}
