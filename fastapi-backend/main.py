@@ -8,16 +8,19 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import aiohttp
 from fastapi.middleware.cors import CORSMiddleware
 
+# Load environment variables
+load_dotenv()
+
+# FastAPI application
 app = FastAPI()
 
+# CORS settings
 origins = [
-    "http://localhost:3000",  # Allow your Next.js frontend
-    "http://127.0.0.1:3000",  # Allow your Next.js frontend
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
     "http://localhost:3034",
-    "http://127.0.0.1:3034",  # Allow your Next.js frontend
+    "http://127.0.0.1:3034",
 ]
-
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -25,11 +28,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-load_dotenv()
+
 # MongoDB connection
 mongodbURI = os.getenv('MONGODB_URI')
 client = AsyncIOMotorClient(mongodbURI)
-db = client.gpt_visits  # database connection
+db = client.pineapple  # Database connection
 
 # Pydantic model for incoming POST requests
 class Post(BaseModel):
@@ -37,20 +40,21 @@ class Post(BaseModel):
     pineappleAmt: int
     query: str
 
-gpt_api_key = os.getenv('CHATGPT_API_KEY')
+# CHAT API settings
+chat_api_key = os.getenv('CHATGPT_API_KEY')
 endpoint = 'https://api.openai.com/v1/chat/completions'
 amt_per_call = int(os.getenv('NEXT_PUBLIC_AMOUNT_PER_CALL', '10'))
 
-async def get_gpt_response(query: str) -> str:
+async def get_response(query: str) -> str:
     async with aiohttp.ClientSession() as session:
         headers = {
-            'Authorization': f'Bearer {gpt_api_key}',
+            'Authorization': f'Bearer {chat_api_key}',
             'Content-Type': 'application/json',
         }
         payload = {
-            'model': 'gpt-4',  # or 'gpt-3.5-turbo' if you have access
+            'model': 'gpt-4',
             'messages': [{'role': 'user', 'content': query}],
-            'max_tokens': 100,  # Adjust as needed
+            'max_tokens': 100,
         }
         async with session.post(endpoint, json=payload, headers=headers) as response:
             if response.status == 200:
@@ -58,73 +62,89 @@ async def get_gpt_response(query: str) -> str:
                 message = ''.join(choice['message']['content'] for choice in data['choices'])
                 return message
             else:
-                print(f"Error fetching GPT response: {response.status}")
-                raise HTTPException(status_code=response.status, detail="Error fetching GPT response")
+                print(f"Error fetching Chat response: {response.status}")
+                raise HTTPException(status_code=response.status, detail="Error fetching Chat response")
 
-@app.get("/posts/")
-async def get_posts():
-    posts = await db.posts.find({}).to_list(length=None)
-    return JSONResponse(content=posts)
+class Agent:
+    def __init__(self, db):
+        self.db = db
 
-@app.post("/posts/")
-async def create_post(post: Post):
-    timestamp = time.time()  # Current time in seconds
-    user_gpt_usage = await db.posts.find_one({"address": post.address})
+    async def request_call(self, post: Post):
+        timestamp = time.time()
+        user_api_usage = await self.db.agents.find_one({"address": post.address})
 
-    if user_gpt_usage:
-        if timestamp - user_gpt_usage['timestamp'] >= 24 * 60 * 60:
-            # Update if 24 hours have passed
-            update = {
-                "$set": {
-                    "timestamp": timestamp,
-                    "holding": post.pineappleAmt,
-                    "usage": amt_per_call,
-                }
-            }
-            await db.posts.update_one({"address": post.address}, update)
-            message = await get_gpt_response(post.query)
-            return JSONResponse(content={
-                "type": "success",
-                "holding": post.pineappleAmt,
-                "usage": user_gpt_usage['usage'],
-                "message": message,
-            })
-        else:
-            if post.pineappleAmt - user_gpt_usage['usage'] >= amt_per_call:
-                # Update usage
-                update = {
-                    "$set": {
-                        "holding": post.pineappleAmt,
-                        "usage": user_gpt_usage['usage'] + amt_per_call,
-                    }
-                }
-                await db.posts.update_one({"address": post.address}, update)
-                message = await get_gpt_response(post.query)
-                return JSONResponse(content={
-                    "type": "success",
-                    "holding": post.pineappleAmt,
-                    "usage": user_gpt_usage['usage'],
-                    "message": message,
-                })
+        if user_api_usage:
+            if timestamp - user_api_usage['timestamp'] >= 24 * 60 * 60:
+                return await self._update_agent(user_api_usage, post, timestamp)
             else:
-                return JSONResponse(content={
-                    "type": "limit reached",
-                    "holding": post.pineappleAmt,
-                    "usage": user_gpt_usage['usage'],
-                    "message": '',
-                })
-    else:
-        # Create a new entry
-        await db.posts.insert_one({
+                if post.pineappleAmt - user_api_usage['usage'] >= amt_per_call:
+                    return await self._update_usage(user_api_usage, post)
+                else:
+                    return JSONResponse(content={
+                        "type": "limit reached",
+                        "holding": post.pineappleAmt,
+                        "usage": user_api_usage['usage'],
+                        "message": '',
+                    })
+        else:
+            return await self._create_new_agent(post, timestamp)
+
+    async def _create_new_agent(self, post, timestamp):
+        await self.db.agents.insert_one({
             "address": post.address,
             "holding": post.pineappleAmt,
             "usage": amt_per_call,
             "timestamp": timestamp,
         })
-        message = await get_gpt_response(post.query)
+        message = await get_response(post.query)
         return JSONResponse(content={
             "type": "success",
             "holding": post.pineappleAmt,
             "usage": amt_per_call,
             "message": message,
         })
+
+    async def _update_agent(self, user_api_usage, post, timestamp):
+        update = {
+            "$set": {
+                "timestamp": timestamp,
+                "holding": post.pineappleAmt,
+                "usage": amt_per_call,
+            }
+        }
+        await self.db.agents.update_one({"address": post.address}, update)
+        message = await get_response(post.query)
+        return JSONResponse(content={
+            "type": "success",
+            "holding": post.pineappleAmt,
+            "usage": amt_per_call,
+            "message": message,
+        })
+
+    async def _update_usage(self, user_api_usage, post):
+        update = {
+            "$set": {
+                "holding": post.pineappleAmt,
+                "usage": user_api_usage['usage'] + amt_per_call,
+            }
+        }
+        await self.db.agents.update_one({"address": post.address}, update)
+        message = await get_response(post.query)
+        return JSONResponse(content={
+            "type": "success",
+            "holding": post.pineappleAmt,
+            "usage": user_api_usage['usage'] + amt_per_call,
+            "message": message,
+        })
+
+# Initialize the Agent
+agent = Agent(db)
+
+@app.get("/posts/")
+async def get_posts():
+    posts = await db.agents.find({}).to_list(length=None)
+    return JSONResponse(content=posts)
+
+@app.post("/posts/")
+async def request_call(post: Post):
+    return await agent.request_call(post)
