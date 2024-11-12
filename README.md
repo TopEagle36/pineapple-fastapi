@@ -16,7 +16,7 @@ npm install -g hardhat
 
 ### Project token deploy
 
-1. Go to pineapple-token-deploy folder:
+1. Go to contracts folder:
 
 ```bash
 cd pineapple-token-deploy
